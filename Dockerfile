@@ -16,5 +16,3 @@ WORKDIR /root/tests
 COPY composer.json /root/
 RUN cd /root/ && composer install --prefer-dist
 ENV PATH $PATH:/root/bin
-
-# ENTRYPOINT ["sh", "-c", "behat --profile=$PROFILE $OPTIONAL_ARGS --config=behat.yml"]
