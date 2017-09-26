@@ -1,5 +1,5 @@
 FROM php:7-alpine
-MAINTAINER Neel Shah
+MAINTAINER "Neel Shah <neel@hostpaas.io>"
 
 # Install Package Dependencies
 RUN apk --update add --no-cache \
