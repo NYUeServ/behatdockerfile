@@ -12,7 +12,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN useradd -ms /bin/bash jenkins
 RUN mkdir -p /root/tests
-WORKDIR /root/tests
+RUN mkdir -p /jenkins/tests
+COPY root/tests /jenkins/tests/
+WORKDIR /jenkins/tests
 
 COPY composer.json /root/
 RUN cd /root/ && composer install --prefer-dist
