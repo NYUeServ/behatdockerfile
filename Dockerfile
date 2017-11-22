@@ -10,6 +10,7 @@ RUN apk --update add --no-cache \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN useradd -ms /bin/bash jenkins
 RUN mkdir -p /root/tests
 WORKDIR /root/tests
 
